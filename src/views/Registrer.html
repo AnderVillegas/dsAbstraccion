@@ -7,6 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/styles/styleRedes.css">
     <link rel="stylesheet" href="/assets/styles/styleForm.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -34,13 +37,13 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="nav-link text-white">
+                  <a href="/src/views/quienesSomos.html" class="nav-link text-white">
                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"></use></svg>
                     Quienes somos
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="nav-link text-white">
+                  <a href="/src/views/productos.html" class="nav-link text-white">
                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
                     Products
                   </a>
@@ -65,7 +68,7 @@
                 <label for="password">Contraseña</label>
                 <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+            <button id="ButtonI" type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
         </form>
         <div class="text-center mt-3">
             <a href="#">¿Olvidaste tu contraseña?</a>
@@ -77,8 +80,8 @@
         <h2 class="text-center">Registro de Usuario</h2>
         <form>
             <div class="form-group">
-                <label for="name">Nombre Completo</label>
-                <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre completo" required>
+                <label for="name">Nombre usuraio</label>
+                <input type="text" class="form-control" id="name1" placeholder="Ingresa tu nombre completo" required>
             </div>
             <div class="form-group">
                 <label for="email">Correo Electrónico</label>
@@ -86,22 +89,20 @@
             </div>
             <div class="form-group">
                 <label for="password">Contraseña</label>
-                <input type="password" class="form-control" id="password" placeholder="Crea una contraseña" required>
+                <input type="password" class="form-control" id="password1" placeholder="Crea una contraseña" required>
             </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirmar Contraseña</label>
-                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirma tu contraseña" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+            
+            <button id="ButtonR" type="submit" class="btn btn-primary btn-block">Registrarse</button>
         </form>
         <div class="text-center mt-3">
-            <p>¿Ya tienes una cuenta? <a href="#">Inicia sesión aquí</a></p>
+            <p>¿Ya tienes una cuenta? <a href="/src/views/Registrer.html">Inicia sesión aquí</a></p>
         </div>
     </div>
     </section>
 
 
-      
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/src/controllers/ingresoyregistro.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body> 
 </html>
