@@ -24,7 +24,7 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
               <li class="nav-item">
-                <a href="/src/views/dasboards.html" class="nav-link active" aria-current="page">
+                <a href="/src/views/dasboards.html" class="nav-link text-white " aria-current="page">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
                         <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
                       </svg>
@@ -32,12 +32,12 @@
                 </a>
               </li>
               <li>
-                <a href="/src/views/retirar.html" class="nav-link text-white">
+                <a href="/src/views/retirar.html" class="nav-link text-white active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1z"/>
                         <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708z"/>
                       </svg>
-                      Retirar y transferir
+                  Retirar y transferir
                 </a>
               </li>
               <li>
@@ -59,7 +59,7 @@
               </li>
 
               <li>
-                <a href="/src/views/consultarSaldo.html" class="nav-link text-white">
+                <a href="/src/views/consultarSaldo.html" class="nav-link text-white ">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
                     <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
                   </svg>
@@ -83,107 +83,73 @@
           </div>
           <div class="b-example-divider b-example-vr"></div>
     </section>
-<section>
 
     <section>
-        <div class="main-content">
-            <h2>Welcome</h2>
-        <div class="card mb-3">
-            <div class="card-body"> 
-            <h5 class="card-title">Disfruta tu estadia</h5> 
-                <h3> <span id="nombreUsuario"></span>!</h3>
-            </div> 
+      <div class="container mt-5"> 
+        <h1 class="text-center mb-4">Transferir Fondos</h1> 
+      <div class="card"> <div class="card-body"> 
+        <h5 class="card-title">Transferir Fondos</h5> 
+        <form id="transferirForm"> 
+      <div class="form-group"> 
+        <label for="numeroCuentaDestino">Número de Cuenta Destino</label> 
+          <input type="text" class="form-control" id="numeroCuentaDestino"> 
         </div> 
+      <div class="form-group"> 
+        <label for="montoTransferencia">Monto a Transferir</label> 
+          <input type="number" class="form-control" id="montoTransferencia" required> 
+        </div> 
+        <button type="submit" class="btn btn-primary btn-block">Transferir</button> 
+      </form> 
+      <div id="transactionResult" class="mt-3">
+      </div> 
+    </div> 
+  </div> 
+</div>
     </section>
 
 <section>
-    <div class="container mt-5"> <h1 class="text-center mb-4">Noticias ProsperiBank</h1> <div class="row"> 
-        <!-- Tarjeta de noticia 1 --> 
-         <div class="col-md-4"> <div class="card mb-4"> 
-            <img src="/assets/img/Nueva Sucursal Abierta en Medellín.jpg" class="card-img-top" alt="Noticia 1"> 
-            <div class="card-body"> 
-                <h5 class="card-title">Nueva Sucursal Abierta en Medellín</h5> 
-                <p class="card-text">Nos complace anunciar la apertura de una nueva sucursal en Medellín, ofreciendo servicios innovadores y personalizados.</p> 
-                <a href="#" class="btn btn-primary">Leer más</a> 
-            </div> 
-        </div> 
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Retirar Fondos</h1> 
+  <div class="card"> 
+    <div class="card-body"> 
+      <h5 class="card-title">Retirar Fondos</h5> 
+      <form id="retirarForm"> <div class="form-group"> 
+        <label for="montoRetiro">Monto a Retirar</label> 
+        <input type="number" class="form-control" id="montoRetiro" required> 
+      </div> 
+      <button type="submit" class="btn btn-danger btn-block">Retirar</button> 
+    </form> <div id="transactionResult" class="mt-3">
     </div> 
-         <!-- Tarjeta de noticia 2 --> 
-          <div class="col-md-4"> <div class="card mb-4"> 
-            <img src="/assets/img/Implementación de Nuevas Tecnologías.jpg" class="card-img-top" alt="Noticia 2"> 
-            <div class="card-body"> 
-                <h5 class="card-title">Implementación de Nuevas Tecnologías</h5> 
-                <p class="card-text">Estamos invirtiendo en nuevas tecnologías para mejorar la seguridad y eficiencia de nuestros servicios bancarios.</p> 
-                <a href="#" class="btn btn-primary">Leer más</a>
-             </div> 
-            </div> 
-        </div> 
-        <!-- Tarjeta de noticia 3 --> 
-         <div class="col-md-4"> 
-            <div class="card mb-4"> 
-            <img src="/assets/img/Programa de Educación Financiera.jpg" class="card-img-top" alt="Noticia 3">     
-            <div class="card-body"> 
-                <h5 class="card-title">Programa de Educación Financiera</h5>
-                <p class="card-text">Lanzamos un nuevo programa de educación financiera para ayudar a nuestros clientes a gestionar mejor sus finanzas.</p> 
-                <a href="#" class="btn btn-primary">Leer más</a> 
-            </div> 
-        </div> 
-    </div> 
-    <!-- Tarjeta de noticia 4 --> 
-     <div class="col-md-4"> 
-        <div class="card mb-4"> 
-        <img src="/assets/img/Expansión Internacional ProsperiBank Llega a México.jpg" class="card-img-top" alt="Noticia 4"> 
-        <div class="card-body"> <h5 class="card-title">Expansión Internacional: ProsperiBank Llega a México</h5> 
-            <p class="card-text">Banco Horizonte se enorgullece de anunciar su expansión a México, llevando nuestros servicios financieros innovadores a nuevos mercados para ayudar a más personas a alcanzar sus objetivos financieros.</p> 
-            <a href="#" class="btn btn-primary">Leer más</a> 
-        </div> 
-    </div> 
-</div> 
-     <!-- Tarjeta de noticia 5 --> 
-      <div class="col-md-4"> 
-        <div class="card mb-4"> 
-            <img src="/assets/img/Lanzamiento de la Aplicación Móvil Mejorada.jpg" class="card-img-top" alt="Noticia 5"> 
-            <div class="card-body"> 
-                <h5 class="card-title">Lanzamiento de la Aplicación Móvil Mejorada</h5>
-                <p class="card-text">Presentamos nuestra nueva aplicación móvil, diseñada para ofrecer una experiencia de usuario más intuitiva y funcionalidades mejoradas, como pagos instantáneos y control de gastos en tiempo real.</p> 
-                <a href="#" class="btn btn-primary">Leer más</a> 
-            </div> 
-        </div> 
-    </div> 
-    <!-- Tarjeta de noticia 6 --> 
-    <div class="col-md-4"> 
-        <div class="card mb-4"> 
-            <img src="/assets/img/Programa de Beneficios para Clientes VIP.jpg" class="card-img-top" alt="Noticia 6"> 
-            <div class="card-body"> 
-                <h5 class="card-title">Programa de Beneficios para Clientes VIP</h5> 
-                <p class="card-text">Hemos lanzado un exclusivo programa de beneficios para nuestros clientes VIP, que incluye acceso a eventos especiales, asesoramiento financiero personalizado y tasas de interés preferenciales en productos seleccionados.</p> 
-                <a href="#" class="btn btn-primary">Leer más</a> 
-            </div> 
-        </div> 
-    </div> 
+  </div> 
 </div> 
 </div>
 </section>
-</section>
 
 
+<script> 
+document.addEventListener('DOMContentLoaded', function() { 
+  document.getElementById('retirarForm').addEventListener('submit', function(event) { event.preventDefault();
+  const montoRetiro = parseFloat(document.getElementById('montoRetiro').value); 
+  const currentUser = JSON.parse(localStorage.getItem('currentUser')); if (currentUser && currentUser.saldo >= montoRetiro) { currentUser.saldo -= montoRetiro; 
+  currentUser.movimientos.push({ descripcion: 'Retiro', monto: -montoRetiro, fecha: new Date().toLocaleString() }); 
+  localStorage.setItem('currentUser', JSON.stringify(currentUser)); 
+  actualizarUsuarios(currentUser); 
+  document.getElementById('transactionResult').innerHTML = `<div class="alert alert-success">Retiro exitoso. Nuevo saldo: $${currentUser.saldo.toFixed(2)}</div>`; 
+  } else { document.getElementById('transactionResult').innerHTML = `<div class="alert alert-danger">Saldo insuficiente o usuario no autorizado.</div>`; } });
+  function actualizarUsuarios(currentUser) { let users = JSON.parse(localStorage.getItem('users')) || []; 
+  users = users.map(user => user.username === currentUser.username ? currentUser : user); 
+  localStorage.setItem('users', JSON.stringify(users)); } }); 
+</script>
 
+<script> document.addEventListener('DOMContentLoaded', function() { document.getElementById('transferirForm').addEventListener('submit', function(event) { event.preventDefault(); const numeroCuentaDestino = document.getElementById('numeroCuentaDestino').value; const montoTransferencia = parseFloat(document.getElementById('montoTransferencia').value); const currentUser = JSON.parse(localStorage.getItem('currentUser')); if (currentUser && currentUser.saldo >= montoTransferencia) { let users = JSON.parse(localStorage.getItem('users')) || []; let cuentaDestino = null; // Buscar la cuenta de destino 
+for (let user of users) { for (let cuenta of user.cuentas) { if (cuenta.numeroCuenta === numeroCuentaDestino) { cuentaDestino = cuenta; break; } } if (cuentaDestino) { break; } } if (cuentaDestino) { 
+  // Realizar la transferencia 
+  currentUser.saldo -= montoTransferencia; currentUser.movimientos.push({ descripcion: `Transferencia a ${numeroCuentaDestino}`, monto: -montoTransferencia, fecha: new Date().toLocaleString() }); cuentaDestino.saldo += montoTransferencia; cuentaDestino.movimientos.push({ descripcion: `Transferencia de ${currentUser.numeroCuenta}`, monto: montoTransferencia, fecha: new Date().toLocaleString() }); // Actualizar los datos en localStorage 
+  localStorage.setItem('currentUser', JSON.stringify(currentUser)); 
+  users = users.map(user => { if (user.numeroIdentificacion === currentUser.numeroIdentificacion) { return currentUser; } else { return { ...user, cuentas: user.cuentas.map(cuenta => cuenta.numeroCuenta === numeroCuentaDestino ? cuentaDestino : cuenta) }; } }); localStorage.setItem('users', JSON.stringify(users)); document.getElementById('transactionResult').innerHTML = `<div class="alert alert-success">Transferencia exitosa. Nuevo saldo: $${currentUser.saldo.toFixed(2)}</div>`; } else { document.getElementById('transactionResult').innerHTML = `<div class="alert alert-danger">Cuenta destino no encontrada.</div>`; } } else { document.getElementById('transactionResult').innerHTML = `<div class="alert alert-danger">Saldo insuficiente o usuario no autorizado.</div>`; } }); }); 
+  </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="/src/controllers/ingresoyregistro.js" ></script>
+<script src="/src/controllers/salida.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>

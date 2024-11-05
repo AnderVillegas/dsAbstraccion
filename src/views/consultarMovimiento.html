@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/assets/styles/styleRedes.css">
 
     <style> 
-    body { display: flex; } 
+    body { display: flex; margin: px;} 
     .sidebar { width: 500px;height: 500px; background: #343a40; color: #fff; } 
     .sidebar .nav-link { color: #fff; } 
     .main-content { flex: 1; padding: 20px; } </style>
@@ -24,7 +24,7 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
               <li class="nav-item">
-                <a href="/src/views/dasboards.html" class="nav-link active" aria-current="page">
+                <a href="/src/views/dasboards.html" class="nav-link text-white" aria-current="page">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
                         <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
                       </svg>
@@ -41,7 +41,7 @@
                 </a>
               </li>
               <li>
-                <a href="/src/views/consultarMovimiento.html" class="nav-link text-white">
+                <a href="/src/views/consultarMovimiento.html" class="nav-link active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
                         <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/>
                       </svg>
@@ -81,110 +81,25 @@
               </ul>
             </div>
           </div>
-          <div class="b-example-divider b-example-vr"></div>
-    </section>
-<section>
-
-    <section>
-        <div class="main-content">
-            <h2>Welcome</h2>
-        <div class="card mb-3">
-            <div class="card-body"> 
-            <h5 class="card-title">Disfruta tu estadia</h5> 
-                <h3> <span id="nombreUsuario"></span>!</h3>
-            </div> 
-        </div> 
     </section>
 
-<section>
-    <div class="container mt-5"> <h1 class="text-center mb-4">Noticias ProsperiBank</h1> <div class="row"> 
-        <!-- Tarjeta de noticia 1 --> 
-         <div class="col-md-4"> <div class="card mb-4"> 
-            <img src="/assets/img/Nueva Sucursal Abierta en Medellín.jpg" class="card-img-top" alt="Noticia 1"> 
-            <div class="card-body"> 
-                <h5 class="card-title">Nueva Sucursal Abierta en Medellín</h5> 
-                <p class="card-text">Nos complace anunciar la apertura de una nueva sucursal en Medellín, ofreciendo servicios innovadores y personalizados.</p> 
-                <a href="#" class="btn btn-primary">Leer más</a> 
-            </div> 
-        </div> 
+    <div class="container mt-5"> <h1 class="text-center mb-4">Consultar Movimientos</h1> <div class="card"> <div class="card-body"> 
+      <h5 class="card-title">Movimientos Recientes</h5> 
+      <ul id="movimientosList" class="list-group"></ul> 
     </div> 
-         <!-- Tarjeta de noticia 2 --> 
-          <div class="col-md-4"> <div class="card mb-4"> 
-            <img src="/assets/img/Implementación de Nuevas Tecnologías.jpg" class="card-img-top" alt="Noticia 2"> 
-            <div class="card-body"> 
-                <h5 class="card-title">Implementación de Nuevas Tecnologías</h5> 
-                <p class="card-text">Estamos invirtiendo en nuevas tecnologías para mejorar la seguridad y eficiencia de nuestros servicios bancarios.</p> 
-                <a href="#" class="btn btn-primary">Leer más</a>
-             </div> 
-            </div> 
-        </div> 
-        <!-- Tarjeta de noticia 3 --> 
-         <div class="col-md-4"> 
-            <div class="card mb-4"> 
-            <img src="/assets/img/Programa de Educación Financiera.jpg" class="card-img-top" alt="Noticia 3">     
-            <div class="card-body"> 
-                <h5 class="card-title">Programa de Educación Financiera</h5>
-                <p class="card-text">Lanzamos un nuevo programa de educación financiera para ayudar a nuestros clientes a gestionar mejor sus finanzas.</p> 
-                <a href="#" class="btn btn-primary">Leer más</a> 
-            </div> 
-        </div> 
-    </div> 
-    <!-- Tarjeta de noticia 4 --> 
-     <div class="col-md-4"> 
-        <div class="card mb-4"> 
-        <img src="/assets/img/Expansión Internacional ProsperiBank Llega a México.jpg" class="card-img-top" alt="Noticia 4"> 
-        <div class="card-body"> <h5 class="card-title">Expansión Internacional: ProsperiBank Llega a México</h5> 
-            <p class="card-text">Banco Horizonte se enorgullece de anunciar su expansión a México, llevando nuestros servicios financieros innovadores a nuevos mercados para ayudar a más personas a alcanzar sus objetivos financieros.</p> 
-            <a href="#" class="btn btn-primary">Leer más</a> 
-        </div> 
-    </div> 
-</div> 
-     <!-- Tarjeta de noticia 5 --> 
-      <div class="col-md-4"> 
-        <div class="card mb-4"> 
-            <img src="/assets/img/Lanzamiento de la Aplicación Móvil Mejorada.jpg" class="card-img-top" alt="Noticia 5"> 
-            <div class="card-body"> 
-                <h5 class="card-title">Lanzamiento de la Aplicación Móvil Mejorada</h5>
-                <p class="card-text">Presentamos nuestra nueva aplicación móvil, diseñada para ofrecer una experiencia de usuario más intuitiva y funcionalidades mejoradas, como pagos instantáneos y control de gastos en tiempo real.</p> 
-                <a href="#" class="btn btn-primary">Leer más</a> 
-            </div> 
-        </div> 
-    </div> 
-    <!-- Tarjeta de noticia 6 --> 
-    <div class="col-md-4"> 
-        <div class="card mb-4"> 
-            <img src="/assets/img/Programa de Beneficios para Clientes VIP.jpg" class="card-img-top" alt="Noticia 6"> 
-            <div class="card-body"> 
-                <h5 class="card-title">Programa de Beneficios para Clientes VIP</h5> 
-                <p class="card-text">Hemos lanzado un exclusivo programa de beneficios para nuestros clientes VIP, que incluye acceso a eventos especiales, asesoramiento financiero personalizado y tasas de interés preferenciales en productos seleccionados.</p> 
-                <a href="#" class="btn btn-primary">Leer más</a> 
-            </div> 
-        </div> 
-    </div> 
-</div> 
+  </div> 
 </div>
-</section>
-</section>
+<script> document.addEventListener('DOMContentLoaded', function() { const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+ if (currentUser) { const movimientosList = document.getElementById('movimientosList'); currentUser.movimientos.forEach(movimiento => { const li = document.createElement('li'); li.classList.add('list-group-item');
+  li.textContent = `${movimiento.fecha} - ${movimiento.descripcion}: $${movimiento.monto}`; movimientosList.appendChild(li); });
+   } else { alert('No estás autorizado para ver esta página'); window.location.href = 'login.html'; } });
+   
+</script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="/src/controllers/Pruebatodoen1.js"></script>
 <script src="/src/controllers/ingresoyregistro.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
